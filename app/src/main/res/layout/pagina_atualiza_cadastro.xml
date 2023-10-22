@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.atualiza.TelaAtualizaFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/voltar_menu"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="583dp" android:background="#CDE494">
+
+                <TextView
+                        android:text="@string/usuario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/usuario_texto5"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" app:layout_constraintEnd_toStartOf="@+id/campo_usuarioAtualizaCadastro"
+                        app:layout_constraintTop_toBottomOf="@+id/emailTexto"
+                        app:layout_constraintBottom_toTopOf="@+id/senhaTexto4"
+                        android:layout_marginBottom="8dp"/>
+                <TextView
+                        android:text="@string/senha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/senhaTexto4"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/usuario_texto5"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_senhaAtualizaCadastro" android:layout_marginTop="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="100dp"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_nomeCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_nome"
+                        android:autofillHints=""
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/campo_dataNascCadastro"
+                        android:layout_marginStart="80dp" app:layout_constraintStart_toEndOf="@+id/transferencia_texto"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="8dp"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_dataNascCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_dataNascimento"
+                        android:importantForAutofill="no"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_nomeCadastro"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/campo_cpfCadastro"
+                        android:layout_marginStart="35dp" app:layout_constraintStart_toEndOf="@+id/numeroConta_texto"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_enderecoCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_endereco"
+                        android:importantForAutofill="no"
+                        android:layout_marginTop="6dp" app:layout_constraintTop_toBottomOf="@+id/campo_cpfCadastro"
+                        android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/campo_telefone"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="43dp" app:layout_constraintStart_toEndOf="@+id/valorTexto"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_telefone"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_telefone"
+                        android:autofillHints=""
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/campo_email"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_enderecoCadastro"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="48dp" app:layout_constraintStart_toEndOf="@+id/saldo_texto"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/campo_email"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_email"
+                        android:importantForAutofill="no"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_telefone"
+                        android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/campo_usuarioAtualizaCadastro"
+                        android:layout_marginStart="85dp" app:layout_constraintStart_toEndOf="@+id/emailTexto"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_usuarioAtualizaCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_usuario"
+                        android:autofillHints=""
+                        app:layout_constraintTop_toBottomOf="@+id/campo_email"
+                        android:layout_marginBottom="7dp" app:layout_constraintBottom_toTopOf="@+id/campo_senhaAtualizaCadastro"
+                        android:layout_marginStart="61dp" app:layout_constraintStart_toEndOf="@+id/usuario_texto5"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/campo_senhaAtualizaCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_senha"
+                        android:importantForAutofill="no"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_usuarioAtualizaCadastro"
+                        app:layout_constraintBottom_toTopOf="@+id/botao_atualizar"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="76dp" app:layout_constraintStart_toEndOf="@+id/senhaTexto4"
+                />
+                <EditText
+                        android:layout_width="210dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_cpfCadastro"
+                        android:background="#CBE4C9"
+                        android:hint="@string/resultado_cpf"
+                        android:autofillHints=""
+                        app:layout_constraintTop_toBottomOf="@+id/campo_dataNascCadastro"
+                        android:layout_marginBottom="4dp" app:layout_constraintBottom_toTopOf="@+id/campo_enderecoCadastro"
+                        android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="106dp" app:layout_constraintStart_toEndOf="@+id/dataFinal_texto"/>
+                <TextView
+                        android:text="@string/nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/transferencia_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/numeroConta_texto"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_nomeCadastro"
+                        app:layout_constraintHorizontal_bias="0.52"
+                        android:layout_marginTop="32dp" android:layout_marginBottom="16dp"/>
+                <TextView
+                        android:text="@string/cpf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/dataFinal_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/numeroConta_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/valorTexto"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_cpfCadastro"/>
+                <TextView
+                        android:text="@string/endereco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/valorTexto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dataFinal_texto" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/saldo_texto"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_enderecoCadastro"/>
+                <TextView
+                        android:text="@string/atualiza_cadastro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_descricao"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_nomeCadastro"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"/>
+                <TextView
+                        android:text="@string/telefone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/saldo_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp"
+                        app:layout_constraintTop_toBottomOf="@+id/valorTexto"
+                        app:layout_constraintBottom_toTopOf="@+id/emailTexto"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_telefone" android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+                <TextView
+                        android:text="@string/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/emailTexto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/saldo_texto" android:layout_marginBottom="24dp"
+                        app:layout_constraintBottom_toTopOf="@+id/usuario_texto5"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_email"/>
+                <TextView
+                        android:text="@string/data_nascimento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/numeroConta_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/transferencia_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/dataFinal_texto"
+                        app:layout_constraintEnd_toStartOf="@+id/campo_dataNascCadastro" android:layout_marginBottom="8dp"/>
+                <Button
+                        android:text="@string/atualiza_cadastroBotao"
+                        android:layout_width="216dp"
+                        android:layout_height="67dp" android:id="@+id/botao_atualizar"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_senhaAtualizaCadastro"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                        android:layout_marginStart="71dp" app:layout_constraintStart_toEndOf="@+id/senhaTexto4"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#333333" android:background="#333333" android:id="@+id/footerConstraint"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

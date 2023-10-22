@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.sessao.TelaSessaoFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/deslogar"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/botao_deslogar"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="583dp" android:background="#CDE494">
+
+                <TextView
+                        android:text="@string/resultado_agencia_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/resultado_agencia_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/resultado_numeroConta"
+                        android:layout_marginBottom="25dp"
+                        app:layout_constraintBottom_toTopOf="@+id/resultado_tipoConta"
+                        android:layout_marginStart="120dp"
+                        app:layout_constraintStart_toEndOf="@+id/dataFinal_texto" android:layout_marginEnd="128dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/resultado_usuario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/resultado_usuario"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginStart="125dp"
+                        app:layout_constraintStart_toEndOf="@+id/transferencia_texto"
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        app:layout_constraintBottom_toTopOf="@+id/resultado_numeroConta"
+                        android:layout_marginEnd="128dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/resultado_saldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/resultado_saldo"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginBottom="54dp"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/resultado_tipoConta"
+                        android:layout_marginStart="148dp"
+                        app:layout_constraintStart_toEndOf="@+id/saldo_texto" android:layout_marginEnd="127dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/resultado_numeroConta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/resultado_numeroConta"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="23dp" app:layout_constraintTop_toBottomOf="@+id/resultado_usuario"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/resultado_agencia_texto"
+                        app:layout_constraintStart_toEndOf="@+id/numeroConta_texto"
+                        android:layout_marginStart="24dp" android:layout_marginEnd="127dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/resultado_tipoConta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/resultado_tipoConta"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/resultado_agencia_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/resultado_saldo" android:layout_marginStart="160dp"
+                        app:layout_constraintStart_toEndOf="@+id/valorTexto"
+                        android:layout_marginBottom="16dp" android:layout_marginEnd="128dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="411dp"
+                        android:layout_height="212dp"
+                        android:id="@+id/constraintLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/resultado_saldo"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageButton
+                            android:drawableStart="@drawable/conta_logo"
+                            android:src="@drawable/conta_logo"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_conta"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CCE5CA"
+                            android:contentDescription="@string/conta_menu"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_transferencia"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/botao_atualizarDados"
+                            android:layout_marginStart="32dp" app:layout_constraintHorizontal_bias="0.6"
+                            android:drawableTintMode="add" android:drawablePadding="@dimen/cardview_compat_inset_shadow"
+                            android:adjustViewBounds="false"/>
+                    <ImageButton
+                            android:src="@drawable/transferencia_logo"
+                            android:text="@string/transferencia"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_transferencia"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            app:layout_constraintVertical_chainStyle="spread_inside"
+
+                            android:drawableStart="@drawable/transferencia_logo"
+                            app:layout_constraintStart_toEndOf="@+id/botao_conta"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_pagamento"
+                            app:layout_constraintBottom_toTopOf="@+id/botao_extrato"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageButton
+                            android:src="@drawable/pagamento_logo"
+                            android:text="@string/pagamento"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_pagamento"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/pagamento_logo"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_deposito"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/botao_transferencia"
+                            app:layout_constraintBottom_toTopOf="@+id/botao_emprestimo"/>
+                    <ImageButton
+                            android:src="@drawable/deposito_logo"
+                            android:text="@string/deposito"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_deposito"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/deposito_logo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/botao_pagamento"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/botao_ajuda" android:layout_marginEnd="32dp"
+                    />
+                    <ImageButton
+                            android:src="@drawable/verifica_pose"
+                            android:text="@string/atualiza_cadastro"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_atualizarDados"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/verifica_pose"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/botao_conta"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_extrato"
+                            app:layout_constraintHorizontal_bias="1.0" android:layout_marginStart="32dp"/>
+                    <ImageButton
+                            android:src="@drawable/enviar_dinheiro"
+                            android:text="@string/extrato"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_extrato"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/enviar_dinheiro"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/botao_transferencia"
+                            app:layout_constraintStart_toEndOf="@+id/botao_atualizarDados"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_emprestimo"/>
+                    <ImageButton
+                            android:src="@drawable/emprestimo"
+                            android:text="@string/cadastrar_usuario"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_emprestimo"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/emprestimo"
+                            app:layout_constraintStart_toEndOf="@+id/botao_extrato"
+                            app:layout_constraintEnd_toStartOf="@+id/botao_ajuda"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/botao_pagamento"/>
+                    <ImageButton
+                            android:src="@drawable/ajuda_logo"
+                            android:text="@string/cadastrar_usuario"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp" android:id="@+id/botao_ajuda"
+                            android:textColor="#CBE4C9" android:backgroundTint="#CBE4C9"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:drawableStart="@drawable/ajuda_logo"
+                            app:layout_constraintTop_toBottomOf="@+id/botao_deposito"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/botao_emprestimo"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="32dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                        android:text="@string/usuario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/transferencia_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/numeroConta_texto"
+                        android:layout_marginTop="32dp" android:layout_marginBottom="8dp"/>
+                <TextView
+                        android:text="@string/agencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/dataFinal_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/numeroConta_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/valorTexto"
+                />
+                <TextView
+                        android:text="@string/tipo_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/valorTexto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dataFinal_texto" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/saldo_texto"
+                />
+                <TextView
+                        android:text="@string/conta_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_descricao"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintBottom_toTopOf="@+id/resultado_usuario"
+                        app:layout_constraintHorizontal_bias="0.541" app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginBottom="32dp"/>
+                <TextView
+                        android:text="@string/saldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/saldo_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp"
+                        app:layout_constraintTop_toBottomOf="@+id/valorTexto"
+                        android:layout_marginBottom="54dp" app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                        android:layout_marginTop="8dp"/>
+                <TextView
+                        android:text="@string/numero_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/numeroConta_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="32dp" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/transferencia_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/dataFinal_texto"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#333333" android:background="#333333" android:id="@+id/footerConstraint"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

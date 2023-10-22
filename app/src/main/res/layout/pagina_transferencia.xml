@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.transferencia.TelaTransferenciaFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/voltar_menu"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="201dp" app:layout_constraintStart_toEndOf="@+id/imageView2"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"
+                        app:layout_constraintEnd_toStartOf="@+id/voltar_botao"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="630dp" android:background="#CDE494">
+
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/campo_cpfBeneficiario"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_cpf"
+                        android:autofillHints=""
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="2dp"
+                        app:layout_constraintBottom_toTopOf="@+id/valorTexto" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/valor_cpfBeneficiario"/>
+                <TextView
+                        android:text="@string/cpf_conta_deposito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/valor_cpfBeneficiario"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_cpfBeneficiario"
+                        android:layout_marginTop="14dp" app:layout_constraintTop_toBottomOf="@+id/campo_tipoConta"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="99dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <Spinner
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:id="@+id/campo_tipoConta"
+                        android:background="#CBE4C9"
+                        android:autofillHints=""
+                        android:entries="@array/opcoes_conta"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_agencia"
+                        app:layout_constraintBottom_toTopOf="@+id/valor_cpfBeneficiario"/>
+                <TextView
+                        android:text="@string/tipo_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tipo_conta_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_agencia"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_tipoConta" android:layout_marginBottom="32dp"
+                        android:layout_marginTop="32dp" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="177dp" android:layout_marginEnd="186dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:id="@+id/campo_dataPagamentoTransfer"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_data"
+                        android:autofillHints=""
+                        app:layout_constraintBottom_toTopOf="@+id/numeroConta_texto"
+                        app:layout_constraintTop_toBottomOf="@+id/transferencia_texto"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_valor"
+                        android:background="#CBE4C9"
+                        android:hint="@string/valor"
+                        android:importantForAutofill="no"
+                        app:layout_constraintBottom_toTopOf="@+id/botao_transferir"
+                        app:layout_constraintTop_toBottomOf="@+id/valorTexto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="55dp" android:layout_marginEnd="56dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_agencia"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_agencia"
+                        android:autofillHints=""
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintTop_toBottomOf="@+id/dataFinal_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_tipoConta" android:layout_marginBottom="32dp"/>
+                <TextView
+                        android:text="@string/valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/valorTexto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_valor" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_cpfBeneficiario"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="177dp"
+                        android:layout_marginEnd="177dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/campo_numeroConta"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_numeroConta"
+                        android:importantForAutofill="no"
+                        app:layout_constraintTop_toBottomOf="@+id/numeroConta_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/dataFinal_texto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="55dp" android:layout_marginEnd="56dp"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+                <TextView
+                        android:text="@string/numero_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/numeroConta_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_dataPagamentoTransfer"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_numeroConta"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="119dp"
+                        android:layout_marginEnd="119dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/data_pagamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/transferencia_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_dataPagamentoTransfer"
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/transferencia_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_descricao"
+                        android:textColor="#6DB13F" android:textSize="17sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintHorizontal_bias="0.439"
+                        app:layout_constraintBottom_toTopOf="@+id/transferencia_texto"
+                        android:layout_marginBottom="8dp" android:layout_marginTop="50dp"/>
+                <TextView
+                        android:text="@string/transferencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_texto"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintHorizontal_bias="0.548"
+                        app:layout_constraintBottom_toTopOf="@+id/faq_descricao" android:layout_marginBottom="24dp"
+                        android:layout_marginTop="24dp"/>
+                <TextView
+                        android:text="@string/agencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/dataFinal_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_agencia"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_numeroConta"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="161dp"
+                        android:layout_marginEnd="162dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <Button
+                        android:text="@string/transferir_botao"
+                        android:layout_width="216dp"
+                        android:layout_height="67dp" android:id="@+id/botao_transferir"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_valor"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

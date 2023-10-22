@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.telainicial.TelaInicialFragment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.android.com/tools ">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/cadastrar"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/login_botao"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                <Button
+                        android:text="@string/login"
+                        android:layout_width="75dp"
+                        android:layout_height="115dp" android:id="@+id/login_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:textSize="11sp" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintEnd_toStartOf="@+id/voltar_botao"
+                        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="100dp"
+                        app:layout_constraintVertical_bias="0.45"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/login_botao"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="35dp"
+                        android:layout_marginStart="8dp" android:contentDescription="@string/spring_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                    android:src="@drawable/spring_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" android:id="@+id/frontend_banner"
+                    android:visibility="visible" tools:visibility="visible"
+                    android:rotation="0"
+                    android:contentDescription="@string/spring_banner"
+                    android:foregroundTint="#6DB23F" android:foregroundTintMode="add"
+                    app:srcCompat="@drawable/spring_banner" android:layout_marginTop="0dp"
+                    android:layout_marginBottom="3dp"
+            />
+            <ImageView
+                    android:src="@drawable/fundo_frontend"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" android:id="@+id/backend_banner"
+                    android:visibility="visible" tools:visibility="visible"
+                    tools:srcCompat="@drawable/fundo_frontend" android:rotation="0"
+                    android:contentDescription="@string/spring_banner" android:layout_marginBottom="0dp"
+                    android:layout_marginTop="3dp"
+            />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#333333" android:background="#333333" android:id="@+id/footerConstraint"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment_activity_main"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                        android:text="@string/footer_traco"
+                        android:layout_width="396dp"
+                        android:layout_height="26dp" android:id="@+id/linhafootercima"
+                        android:textColorHint="#F4F4F4" android:textColor="#FFF6F6"
+                        app:layout_constraintBottom_toTopOf="@+id/linhafooter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="9dp"/>
+                <TextView
+                        android:text="@string/footer_texto"
+                        android:layout_width="394dp"
+                        android:layout_height="62dp" android:id="@+id/linhafooter"
+                        android:textColorHint="#F4F4F4" android:textColor="#FFF6F6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="10dp" android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/footer"
+                        app:layout_constraintTop_toBottomOf="@+id/linhafootercima"/>
+                <TextView
+                        android:text="@string/footer_traco"
+                        android:layout_width="396dp"
+                        android:layout_height="26dp" android:id="@+id/footer"
+                        android:textColorHint="#F4F4F4" android:textColor="#FFF6F6"
+                        app:layout_constraintTop_toBottomOf="@+id/linhafooter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="9dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

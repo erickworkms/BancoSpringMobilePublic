@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">BancoSpringMobile</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="login">Login</string>
+    <string name="spring_banner">Este é o banner back_end</string>
+    <string name="frontend_banner">Este é o banner front_end</string>
+    <string name="footer_texto">Este template pode ser modificado a vontade, foi apenas criado com o objetivo de
+        demonstrar a integração de softwares e api´s de mercado.
+    </string>
+    <string name="footer_traco">
+        ----------------------------------------------------------------------------------------------------------------
+    </string>
+    <string name="spring_logo">Logo</string>
+
+
+    <string name="voltar_menu">Voltar</string>
+    <string name="voltar_sessao">Voltar ao menu</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="logar">Logar</string>
+    <string name="usuario_cadastrado">Ainda não tem um usuário cadastrado?</string>
+    <string name="clique_aqui">Clique Aqui</string>
+    <string name="digitar_usuario">Digite seu usuário</string>
+
+
+    <string name="digitar_nome">"nome sobrenome"</string>
+    <string name="digitar_nascimento">00/00/0000</string>
+    <string name="digitar_cpf">"00000000"</string>
+    <string name="digitar_endereco">"Rua…Avenida.."</string>
+    <string name="digitar_telefone">90000000000</string>
+    <string name="digitar_email">email@email.com</string>
+    <string name="digitar_senha">Digite sua senha</string>
+    <string name="digitar_data">00/00/0000</string>
+    <string name="digitar_codigo">0000.0000.0000.0000.0000</string>
+    <string name="digitar_valor">0,00</string>
+    <string name="digitar_numeroConta">00000</string>
+    <string name="digitar_agencia">A5693–4</string>
+    <string name="tela_cadastro">Tela de Cadastro</string>
+    <string name="nome">Nome</string>
+    <string name="data_nascimento">Data Nasc</string>
+    <string name="cpf">Cpf</string>
+    <string name="endereco">Endereço</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="cadastrar_usuario">Cadastrar Usuário</string>
+
+
+    <string name="transferencia">Transferencia</string>
+    <string name="pagamento">Pagamento</string>
+    <string name="deposito">Depósito</string>
+    <string name="atualizar_dados">Atualizar Dados</string>
+    <string name="extrato">Extrato</string>
+    <string name="emprestimo">Emprestimo</string>
+    <string name="ajuda">Ajuda</string>
+    <string name="numero_conta">Número da conta</string>
+    <string name="agencia">Agência</string>
+    <string name="tipo_conta">Tipo</string>
+    <string name="saldo">Saldo</string>
+    <string name="conta_menu">Conta Menu</string>
+
+    <string name="criar_conta">Criar Conta Bancaria</string>
+    <string name="conta_corrente">Conta Corrente</string>
+    <string name="conta_poupanca">Conta Poupança</string>
+    <string name="conta_salario">Conta Salário</string>
+
+    <string name="transferencia_texto">Escolha abaixo os dados para a transferência</string>
+
+
+    <string name="pagamento_texto">Escolha abaixo a data para o agendar o pagamento</string>
+    <string name="data_pagamento">Data de Pagamento</string>
+    <string name="codigo_barra">Codigo de Barra</string>
+    <string name="valor">Valor</string>
+    <string name="vencimento">Vencimento</string>
+    <string name="pagar">Pagar</string>
+
+
+    <string name="atualiza_cadastro">Atualização de cadastro</string>
+    <string name="atualiza_cadastroBotao">Atualizar Cadastro</string>
+
+    <string name="extrato_texto">Escolha abaixo o periodo e tipo de conta para extrato bancário</string>
+    <string name="data_inicial">Data Inicial</string>
+    <string name="data_final">Data Final</string>
+    <string name="buscar">Buscar</string>
+    <string name="depositos">Depósitos</string>
+    <string name="transferencias">Transferências</string>
+    <string name="pagamentos">Pagamentos</string>
+
+    <string name="deposito_texto">Coloque os dados abaixo para o deposito em conta</string>
+    <string name="deposito_data">Data de deposito</string>
+    <string name="numero_conta_deposito">Número da conta</string>
+    <string name="cpf_conta_deposito">CPF do beneficiario</string>
+    <string name="depositar">Depositar</string>
+    <string name="deslogar">Deslogar</string>
+
+    <string name="emprestimo_texto">Escolha abaixo a data para o agendar o emprestimo</string>
+
+    <string name="faq">FAQ</string>
+    <string name="faq_texto">Lista com explicações das funcionalidades</string>
+    <string name="conta_faq_texto">Teste funcionalidades de criação e escolha de tipos de contas</string>
+    <string name="transferencia_faq_texto">Teste a transfêrencia de valores em contas diferentes</string>
+    <string name="pagamento_faq_texto">Teste o pagamento de boleto e leitura de valores</string>
+    <string name="deposito_faq_texto">Teste o deposito de valores em contas diferentes ou propria</string>
+    <string name="atualiza_faq_texto">Mude dados gravados após cadastrar suas contas por este menu</string>
+    <string name="extrato_faq_texto">Tire o extrato de ações feitas nas contas</string>
+    <string name="emprestimo_faq_texto">Registre emprestimos para uma conta</string>
+
+
+    <string name="resultado_usuario">......</string>
+    <string name="resultado_numeroConta">......</string>
+    <string name="resultado_agencia_texto">......</string>
+    <string name="resultado_tipoConta">......</string>
+    <string name="resultado_saldo">......</string>
+
+    <string name="resultado_nome">......</string>
+    <string name="resultado_dataNascimento">......</string>
+    <string name="resultado_cpf">......</string>
+    <string name="resultado_endereco">......</string>
+    <string name="resultado_telefone">......</string>
+    <string name="resultado_email">......</string>
+    <string name="resultado_senha">......</string>
+
+    <string name="transferir_botao">Transferir</string>
+    <string name="depositar_botao">Depositar</string>
+    <string name="depositar_emprestar">Receber Emprestimo</string>
+    <string name="extrato_botao">Pesquisar</string>
+
+    <string-array name="opcoes_conta">
+        <item name="opcao_conta_corrente">Conta Corrente</item>
+        <item name="opcao_poupanca">Conta Poupança</item>
+        <item name="opcao_salario">Conta Salário</item>
+    </string-array>
+
+    <string name="Tela_Inicial">Tela Inicial</string>
+    <string name="Tela_Login">Tela Login</string>
+    <string name="Tela_Cadastro">Tela Cadastro</string>
+
+    <string name="Tela_Conta">Tela Conta</string>
+    <string name="Tela_Transferencia">Tela Transferencia</string>
+    <string name="Tela_Pagamento">Tela Pagamento</string>
+    <string name="Tela_Deposito">Tela Deposito</string>
+    <string name="Tela_Atualiza">Tela Atualiza</string>
+    <string name="Tela_Extrato">Tela Extrato</string>
+    <string name="Tela_Emprestimo">Tela Emprestimo</string>
+    <string name="Tela_Ajuda">Tela Ajuda</string>
+    <string name="Tela_Sessao">Tela Sessao</string>
+
+    <string name="base_url">http://localhost:8080</string>
+
+</resources>

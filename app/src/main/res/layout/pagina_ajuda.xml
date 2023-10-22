@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ajuda.TelaAjudaFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/voltar_menu"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="630dp" android:background="#CDE494">
+
+                <TextView
+                        android:text="@string/conta_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/conta_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/faq_descricao"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/conta_descricao" android:layout_marginTop="32dp"
+                />
+                <TextView
+                        android:text="@string/emprestimo_faq_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/emprestimo_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/emprestimo_texto"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="16dp" android:layout_marginEnd="46dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/emprestimo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/emprestimo_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.506"
+                        app:layout_constraintTop_toBottomOf="@+id/extrato_descricao"
+                        app:layout_constraintBottom_toTopOf="@+id/emprestimo_descricao"/>
+                <TextView
+                        android:text="@string/extrato_faq_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/extrato_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/extrato_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/emprestimo_texto"
+                />
+                <TextView
+                        android:text="@string/extrato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/extrato_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/atualizaDados_descricao"
+                        app:layout_constraintBottom_toTopOf="@+id/extrato_descricao"/>
+                <TextView
+                        android:text="@string/atualiza_faq_texto"
+                        android:layout_width="348dp"
+                        android:layout_height="50dp" android:id="@+id/atualizaDados_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/atualizaDados_texto" android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/extrato_texto"/>
+                <TextView
+                        android:text="@string/atualizar_dados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/atualizaDados_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/deposito_descricao"
+                        app:layout_constraintBottom_toTopOf="@+id/atualizaDados_descricao"/>
+                <TextView
+                        android:text="@string/deposito_faq_texto"
+                        android:layout_width="345dp"
+                        android:layout_height="46dp" android:id="@+id/deposito_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/deposito_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/atualizaDados_texto"/>
+                <TextView
+                        android:text="@string/deposito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/deposito_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.495" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/pagamento_descricao" android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/deposito_descricao"/>
+                <TextView
+                        android:text="@string/pagamento_faq_texto"
+                        android:layout_width="350dp"
+                        android:layout_height="46dp" android:id="@+id/pagamento_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/pagamento_texto" android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/deposito_texto"/>
+                <TextView
+                        android:text="@string/pagamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/pagamento_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/transferencia_descricao"
+                        android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/pagamento_descricao"/>
+                <TextView
+                        android:text="@string/transferencia_faq_texto"
+                        android:layout_width="354dp"
+                        android:layout_height="49dp" android:id="@+id/transferencia_descricao"
+                        android:textColor="#6DB13F" android:textSize="20sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/transferencia_texto" android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toTopOf="@+id/pagamento_texto"/>
+                <TextView
+                        android:text="@string/conta_faq_texto"
+                        android:layout_width="354dp"
+                        android:layout_height="39dp" android:id="@+id/conta_descricao"
+                        android:textColor="#6DB13F" android:textSize="16sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/conta_texto"
+                        app:layout_constraintBottom_toTopOf="@+id/transferencia_texto"/>
+                <TextView
+                        android:text="@string/transferencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/transferencia_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.491" android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/conta_descricao"
+                        app:layout_constraintBottom_toTopOf="@+id/transferencia_descricao"/>
+                <TextView
+                        android:text="@string/faq_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_descricao"
+                        android:textColor="#6DB13F" android:textSize="17sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintHorizontal_bias="0.439"
+                        app:layout_constraintBottom_toTopOf="@+id/transferencia_texto"
+                        android:layout_marginBottom="56dp" android:layout_marginTop="32dp"/>
+                <TextView
+                        android:text="@string/faq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_texto"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintHorizontal_bias="0.548"
+                        app:layout_constraintBottom_toTopOf="@+id/faq_descricao" android:layout_marginBottom="32dp"
+                        android:layout_marginTop="32dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

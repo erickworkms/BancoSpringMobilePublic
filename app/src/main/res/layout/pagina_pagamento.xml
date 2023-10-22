@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.pagamento.TelaPagamentoFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA">
+                <Button
+                        android:text="@string/voltar_menu"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="583dp" android:background="#CDE494">
+
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_pagamento"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_data"
+                        android:autofillHints=""
+                        android:layout_marginBottom="13dp"
+                        app:layout_constraintBottom_toTopOf="@+id/codigoBarra_texto" android:layout_marginTop="7dp"
+                        app:layout_constraintTop_toBottomOf="@+id/pagamentoData_texto"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_vencimento"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_data"
+                        android:importantForAutofill="no"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/vencimentoTexto" android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/botao_pagar"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/campo_valorPagamento"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_valor"
+                        android:autofillHints=""
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/valorPagamento_texto"
+                        android:layout_marginBottom="13dp"
+                        app:layout_constraintBottom_toTopOf="@+id/vencimentoTexto"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
+                        android:layout_marginEnd="56dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/vencimento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/vencimentoTexto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_valorPagamento"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_vencimento"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="140dp"
+                        android:layout_marginEnd="141dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/campo_numeroCodigo"
+                        android:background="#CBE4C9"
+                        android:hint="@string/digitar_codigo"
+                        android:importantForAutofill="no"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/codigoBarra_texto" android:layout_marginBottom="9dp"
+                        app:layout_constraintBottom_toTopOf="@+id/valorPagamento_texto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="55dp" android:layout_marginEnd="56dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/codigo_barra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/codigoBarra_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_pagamento" android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_numeroCodigo"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="119dp"
+                        android:layout_marginEnd="119dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/data_pagamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/pagamentoData_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginBottom="7dp"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_pagamento"
+                        app:layout_constraintTop_toBottomOf="@+id/faqPagamento_descricao"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                        android:text="@string/pagamento_texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faqPagamento_descricao"
+                        android:textColor="#6DB13F" android:textSize="17sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        android:layout_marginTop="100dp" app:layout_constraintHorizontal_bias="0.439"
+                        android:layout_marginBottom="18dp"
+                        app:layout_constraintBottom_toTopOf="@+id/pagamentoData_texto"/>
+                <TextView
+                        android:text="@string/pagamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/pagamentoBase_texto"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        android:layout_marginTop="36dp" app:layout_constraintHorizontal_bias="0.548"
+                        android:layout_marginBottom="19dp" app:layout_constraintBottom_toTopOf="@+id/faqPagamento_descricao"/>
+                <TextView
+                        android:text="@string/valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/valorPagamento_texto"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_numeroCodigo"
+                        app:layout_constraintBottom_toTopOf="@+id/campo_valorPagamento"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="177dp"
+                        android:layout_marginEnd="177dp" app:layout_constraintEnd_toEndOf="parent"/>
+                <Button
+                        android:text="@string/pagar"
+                        android:layout_width="216dp"
+                        android:layout_height="67dp" android:id="@+id/botao_pagar"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="100dp"
+                        app:layout_constraintTop_toBottomOf="@+id/campo_vencimento" android:layout_marginBottom="32dp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#333333" android:background="#333333" android:id="@+id/footerConstraint"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

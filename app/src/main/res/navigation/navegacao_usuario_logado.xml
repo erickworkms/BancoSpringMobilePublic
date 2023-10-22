@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navegacao_usuario_logado"
+            app:startDestination="@+id/Tela_Sessao">
+
+    <fragment
+            android:id="@+id/Tela_Sessao"
+            android:name="com.example.bancospringmobile.ui.sessao.TelaSessaoFragment"
+            android:label="@string/Tela_Sessao"
+            tools:layout="@layout/pagina_sessao">
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Conta" app:destination="@id/Tela_Conta"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Transferencia" app:destination="@id/Tela_Transferencia"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Emprestimo" app:destination="@id/Tela_Emprestimo"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Atualiza" app:destination="@id/Tela_Atualiza"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Deposito" app:destination="@id/Tela_Deposito"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Pagamento" app:destination="@id/Tela_Pagamento"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Extrato" app:destination="@id/Tela_Extrato"/>
+        <action android:id="@+id/action_Tela_Sessao_to_Tela_Ajuda" app:destination="@id/Tela_Ajuda"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/Tela_Conta"
+            android:name="com.example.bancospringmobile.ui.criacontas.TelaCriaContasFragment"
+            android:label="@string/Tela_Conta"
+            tools:layout="@layout/pagina_cria_contas">
+        <action android:id="@+id/action_Tela_Conta_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/Tela_Transferencia"
+            android:name="com.example.bancospringmobile.ui.transferencia.TelaTransferenciaFragment"
+            android:label="@string/Tela_Transferencia"
+            tools:layout="@layout/pagina_transferencia">
+        <action android:id="@+id/action_Tela_Transferencia_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Pagamento"
+            android:name="com.example.bancospringmobile.ui.pagamento.TelaPagamentoFragment"
+            android:label="@string/Tela_Pagamento"
+            tools:layout="@layout/pagina_pagamento">
+        <action android:id="@+id/action_Tela_Pagamento_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Deposito"
+            android:name="com.example.bancospringmobile.ui.deposito.TelaDepositoFragment"
+            android:label="@string/Tela_Deposito"
+            tools:layout="@layout/pagina_deposito">
+        <action android:id="@+id/action_Tela_Deposito_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Atualiza"
+            android:name="com.example.bancospringmobile.ui.atualiza.TelaAtualizaFragment"
+            android:label="@string/Tela_Atualiza"
+            tools:layout="@layout/pagina_atualiza_cadastro">
+        <action android:id="@+id/action_Tela_Atualiza_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Extrato"
+            android:name="com.example.bancospringmobile.ui.extrato.TelaExtratoFragment"
+            android:label="@string/Tela_Extrato"
+            tools:layout="@layout/pagina_extrato">
+        <action android:id="@+id/action_Tela_Extrato_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Emprestimo"
+            android:name="com.example.bancospringmobile.ui.emprestimo.TelaEmprestimoFragment"
+            android:label="@string/Tela_Emprestimo"
+            tools:layout="@layout/pagina_emprestimo">
+        <action android:id="@+id/action_Tela_Emprestimo_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+    <fragment
+            android:id="@+id/Tela_Ajuda"
+            android:name="com.example.bancospringmobile.ui.ajuda.TelaAjudaFragment"
+            android:label="@string/Tela_Ajuda"
+            tools:layout="@layout/pagina_ajuda">
+        <action android:id="@+id/action_Tela_Ajuda_to_Tela_Sessao" app:destination="@id/Tela_Sessao"/>
+    </fragment>
+</navigation>

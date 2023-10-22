@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" android:layout_marginTop="0dp"
+                    android:backgroundTint="#CCE5CA" android:background="#CCE5CA" android:id="@+id/headerid">
+                <Button
+                        android:text="@string/voltar_menu"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp" android:id="@+id/voltar_botao"
+                        android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                        android:includeFontPadding="false" android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"/>
+                <ImageView
+                        android:src="@drawable/springlogo2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="5dp" android:contentDescription="@string/spring_logo"
+                        app:layout_constraintEnd_toStartOf="@+id/voltar_botao" android:layout_marginEnd="202dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="302dp" android:background="#CDE494" android:id="@+id/base_id">
+
+
+                <TextView
+                        android:text="@string/conta_corrente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/data_inicial_texto2"
+                        android:textColor="#6DB13F" android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                        android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.511"
+
+                        app:layout_constraintTop_toBottomOf="@+id/faq_texto" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/grupo_opcoes_conta"/>
+
+                <RadioGroup
+                        android:id="@+id/grupo_opcoes_conta"
+                        android:layout_width="428dp"
+                        android:layout_height="196dp"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.533" app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="16dp" android:layout_marginTop="6dp"
+                        app:layout_constraintTop_toBottomOf="@+id/data_inicial_texto2">
+                    <RadioButton
+                            android:layout_width="300dp"
+                            android:layout_height="48dp"
+                            android:ems="10"
+                            android:id="@+id/campo_contaSalario"
+                            android:background="#CBE4C9"
+                            android:hint="@string/conta_salario"
+                            android:autofillHints=""
+                            android:layout_marginStart="55dp"
+                            android:layout_marginEnd="56dp"
+                    />
+                    <RadioButton
+                            android:layout_width="300dp"
+                            android:layout_height="48dp"
+                            android:ems="10"
+                            android:id="@+id/campo_contaPoupanca"
+                            android:background="#CBE4C9"
+                            android:hint="@string/conta_poupanca"
+                            android:autofillHints=""
+                            android:layout_marginStart="55dp"
+                            android:layout_marginEnd="56dp"
+                            android:layout_marginTop="0dp"/>
+                    <RadioButton
+                            android:layout_width="300dp"
+                            android:layout_height="48dp"
+                            android:ems="10"
+                            android:id="@+id/campo_contaCorrente"
+                            android:background="#CBE4C9"
+                            android:hint="@string/conta_corrente"
+                            android:autofillHints=""
+                            android:layout_marginStart="55dp"
+                            android:layout_marginEnd="56dp"
+                            android:layout_marginTop="0dp"/>
+                    <Button
+                            android:text="@string/criar_conta"
+                            android:layout_width="216dp"
+                            android:layout_height="67dp" android:id="@+id/botao_CriaConta"
+                            android:textColor="#CBE4C9" android:backgroundTint="#6DB23F"
+                            android:includeFontPadding="false" android:textSize="15sp"
+                            android:layout_marginEnd="100dp"
+                            android:layout_marginStart="95dp"
+                            app:layout_constraintTop_toBottomOf="@+id/campo_contaCorrente"/>
+                </RadioGroup>
+                <TextView
+                        android:text="@string/criar_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/faq_texto"
+                        android:textColor="#6DB13F" android:textSize="34sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+                        app:layout_constraintHorizontal_bias="0.457"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/data_inicial_texto2"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="336dp"
+                    android:id="@+id/tabela_contas" android:background="#CAE3C8"
+                    android:stretchColumns="*"
+                    android:padding="8dp">
+            >
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
